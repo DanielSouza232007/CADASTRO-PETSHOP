@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const resultado = document.getElementById('resultado');
 
   form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Impede recarregamento
+    event.preventDefault();
 
-    // Coleta dos dados
+    
     const nomeCliente = document.getElementById('nomeCliente').value;
     const cpf = document.getElementById('cpf').value;
     const telefone = document.getElementById('telefone').value;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const tipoServico = document.getElementById('tipoServico').value;
     const observacao = document.getElementById('observacao').value;
 
-    // Exibe no console também
+    
     console.log('📋 Dados do Cadastro:');
     console.log({
       cliente: { nomeCliente, cpf, telefone, endereco, email },
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       servico: { tipoServico, observacao }
     });
 
-    // Monta a exibição na página
+    
     resultado.innerHTML = `
       <br><h2>📋 Dados Enviados Com Sucesso!</h2></br>
       <div style="background: #d0e8f2; padding: 1rem; border-radius: 10px;">
@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     `;
 
-    // Rola a página até a div de resultado
+    
     resultado.scrollIntoView({ behavior: "smooth" });
   });
+
 });
